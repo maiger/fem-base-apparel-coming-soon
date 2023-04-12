@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <div class="container__text">
+          <img src="images/logo.svg" alt="Base apparel logo" class="logo" />
+          <h1 class="title"><span>We're</span>coming soon</h1>
+          <div class="description">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </div>
+          <form class="email__container">
+            <input
+              type="text"
+              class="email__input"
+              placeholder="Email Address"
+            />
+            <button class="email__submit">
+              <img src="images/icon-arrow.svg" alt="Right arrow icon" />
+            </button>
+            <img
+              src="images/icon-error.svg"
+              alt="error"
+              class="email__invalid-icon hidden"
+            />
+            <p class="email__invalid hidden">Please provide a valid email</p>
+          </form>
+        </div>
+        <div class="container__img">
+          <picture>
+            <source media="(max-width:650px)" srcset="images/hero-mobile.jpg" />
+            <img src="images/hero-desktop.jpg" alt="Woman in smart clothes" />
+          </picture>
+        </div>
+        <div class="mobile__logo">
+          <img src="images/logo.svg" alt="Base apparel logo" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Me</a>.
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

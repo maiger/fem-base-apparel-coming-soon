@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+/* ---------- RESET ---------- */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ---------- VARIABLES ---------- */
+:root {
+  /* COLORS */
+  /* PRIMARY */
+  --color-primary-1: hsl(0, 36%, 70%);
+  --color-primary-2: hsl(0, 93%, 68%);
+  /* NEUTRAL */
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-gray: hsl(0, 6%, 24%);
+  /* GRADIENTS */
+  --color-gradient-1: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  --color-gradient-2: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+  /* TEXT */
+  --text-heading-size: 6.5rem;
+  --text-para-size: 1.6rem;
+  --text-sans-serif-font: "Josefin Sans", sans-serif;
+  --text-weight-light: 300;
+  --text-weight-regular: 400;
+  --text-weight-semibold: 600;
+}
+
+/* ---------- BASE STYLES ---------- */
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: var(--text-sans-serif-font);
+  font-weight: var(--text-weight-regular);
+  font-size: var(--text-para-size);
+}
+
+footer {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (max-width: 1000px) {
+  footer {
+    display: none;
+  }
+}
+
+html {
+  background: var(--color-gradient-1);
+}
+@media (max-width: 750px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 650px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+main {
+  height: 100vh;
+  overflow: hidden;
+}
+@media (max-width: 650px) {
+  main {
+    overflow: auto;
+  }
+}
+
+.container {
+  height: 100%;
+  display: flex;
+}
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: center;
+  }
+}
+.container__text {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  padding: 5rem 10rem;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-size: cover;
+  background-color: var(--color-gradient-1);
+}
+@media (max-width: 1000px) {
+  .container__text {
+    padding: 2rem 5rem;
+  }
+}
+@media (max-width: 650px) {
+  .container__text {
+    width: 100%;
+    background-image: none;
+    background-size: fill;
+  }
+}
+.container__text .logo {
+  width: 15rem;
+  margin-bottom: 15rem;
+}
+@media (max-width: 1000px) {
+  .container__text .logo {
+    margin-bottom: 10rem;
+  }
+}
+@media (max-width: 750px) {
+  .container__text .logo {
+    display: none;
+  }
+}
+.container__text .title {
+  font-size: var(--text-heading-size);
+  font-weight: var(--text-weight-semibold);
+  color: var(--color-neutral-gray);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-bottom: 2rem;
+}
+@media (max-width: 650px) {
+  .container__text .title {
+    text-align: center;
+  }
+}
+.container__text .title span {
+  font-weight: var(--text-weight-light);
+  display: block;
+  color: var(--color-primary-1);
+}
+.container__text .description {
+  font-size: var(--text-para-size);
+  color: var(--color-primary-1);
+  line-height: 1.8;
+  margin-bottom: 5rem;
+  width: 75%;
+}
+@media (max-width: 1000px) {
+  .container__text .description {
+    width: 100%;
+  }
+}
+.container__img {
+  height: 100%;
+  width: 45%;
+}
+@media (max-width: 650px) {
+  .container__img {
+    height: 35rem;
+    width: 100%;
+  }
+}
+.container__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.email__container {
+  position: relative;
+  width: 80%;
+  margin-bottom: 5rem;
+}
+@media (max-width: 1000px) {
+  .email__container {
+    width: 100%;
+  }
+}
+.email__input {
+  width: 100%;
+  outline: none;
+  padding: 2rem;
+  border-radius: 100px;
+  border: solid 1px var(--color-primary-1);
+  color: var(--color-neutral-gray);
+  background-color: transparent;
+  font-size: var(--text-para-size);
+}
+.email__input::placeholder {
+  color: var(--color-primary-1);
+}
+.email__submit {
+  position: absolute;
+  top: 0px;
+  right: -1px;
+  outline: none;
+  border: none;
+  padding: 1.9rem 5rem;
+  border-radius: 100px;
+  background: var(--color-gradient-2);
+  box-shadow: 5px 15px 20px rgba(214, 136, 136, 0.3);
+  cursor: pointer;
+  transition: background 1s;
+}
+.email__submit img {
+  height: 2rem;
+}
+.email__submit:hover {
+  background: linear-gradient(rgb(255, 199, 199), rgb(255, 199, 199));
+}
+.email__invalid-icon {
+  position: absolute;
+  top: 1.8rem;
+  right: 12.5rem;
+}
+.email__invalid {
+  color: var(--color-primary-2);
+  margin: 1.5rem 0 0 2rem;
+}
+
+.invalid {
+  border: 2px solid var(--color-primary-2);
+}
+
+.hidden {
+  display: none;
+}
+
+.mobile__logo {
+  display: none;
+  align-self: start;
+  padding: 4rem;
+}
+.mobile__logo img {
+  width: 15rem;
+}
+@media (max-width: 650px) {
+  .mobile__logo {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
